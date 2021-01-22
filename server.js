@@ -62,7 +62,7 @@ app.get('/api/heartdisease',(req,res) =>{
     
     res.status(200).json({
         status:'success',
-        data:heartdiseaseMedData
+        data:HeartdiseaseMedData
     })})
     app.get('/api/Asthma',(req,res) =>{
     
