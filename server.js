@@ -23,8 +23,39 @@ const diabetesMedData = {
     heartRate:randomVal(60, 100),
     Cholesterol:randomVal(125,200),
     OxygenSaturation:randomVal(95,100)
+    
 }
-const HeartdiseaseMedData = {
+const prediabetesMedData = {
+    bodyTemperature:randomVal(35,38),
+    bloodPressure:randomVal(80, 120),
+    Respiration:randomVal(12,16),
+    Glucose:randomVal(72,140),
+    heartRate:randomVal(60, 100),
+    Cholesterol:randomVal(125,200),
+    OxygenSaturation:randomVal(95,100)
+    
+}
+const bronchiectasisMedData = {
+    bodyTemperature:randomVal(35,38),
+    bloodPressure:randomVal(80, 120),
+    Respiration:randomVal(12,16),
+    Glucose:randomVal(72,140),
+    heartRate:randomVal(60, 100),
+    Cholesterol:randomVal(125,200),
+    OxygenSaturation:randomVal(95,100)
+    
+}
+const chdMedData = {
+    bodyTemperature:randomVal(35,38),
+    bloodPressure:randomVal(80, 120),
+    Respiration:randomVal(12,16),
+    Glucose:randomVal(72,140),
+    heartRate:randomVal(60, 100),
+    Cholesterol:randomVal(125,200),
+    OxygenSaturation:randomVal(95,100)
+    
+}
+const hypoxemiaMedData = {
     bodyTemperature:randomVal(35,38),
     bloodPressure:randomVal(80, 120),
     Respiration:randomVal(12,16),
@@ -58,12 +89,32 @@ app.get('/api/diabetes',(req,res) =>{
         data:diabetesMedData
     })
 })
-app.get('/api/heartdisease',(req,res) =>{
+app.get('/api/prediabetes',(req,res) =>{
     
     res.status(200).json({
         status:'success',
-        data:HeartdiseaseMedData
+        data:prediabetesMedData
+    })
+})
+app.get('/api/bronchiectasis',(req,res) =>{
+    
+    res.status(200).json({
+        status:'success',
+        data:diabetesMedData
+    })
+})
+app.get('/api/chd',(req,res) =>{
+    
+    res.status(200).json({
+        status:'success',
+        data:chdMedData
     })})
+    app.get('/api/hypoxemia',(req,res) =>{
+    
+        res.status(200).json({
+            status:'success',
+            data:hypoxemiaMedData
+        })})
     app.get('/api/Asthma',(req,res) =>{
     
         res.status(200).json({
