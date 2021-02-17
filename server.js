@@ -5,7 +5,8 @@ const port= process.env.PORT||8080
 const randomVal = (min, max) => {
     return Math.floor(Math.random() * (max-min+1)+min)
     };
-const normalMedData =()=> ({
+
+const normalMedData =() =>  ({
     bodyTemperature:randomVal(35,38),
     bloodPressure:randomVal(80, 120),
     Respiration:randomVal(12,16),
@@ -15,7 +16,7 @@ const normalMedData =()=> ({
     OxygenSaturation:randomVal(95,100)
 })
 
-const diabetesMedData =()=> ({
+const diabetesMedData =() =>  ({
     bodyTemperature:randomVal(35,38),
     bloodPressure:randomVal(80, 120),
     Respiration:randomVal(12,16),
@@ -23,9 +24,10 @@ const diabetesMedData =()=> ({
     heartRate:randomVal(60, 100),
     Cholesterol:randomVal(125,200),
     OxygenSaturation:randomVal(95,100)
-    )
 }
-const prediabetesMedData =()=> ({
+)
+
+const prediabetesMedData =() =>  ({
     bodyTemperature:randomVal(35,38),
     bloodPressure:randomVal(80, 120),
     Respiration:randomVal(12,16),
@@ -33,29 +35,20 @@ const prediabetesMedData =()=> ({
     heartRate:randomVal(60, 100),
     Cholesterol:randomVal(125,200),
     OxygenSaturation:randomVal(95,100)
-    )
 }
-const bronchiectasisMedData =()=> ({
+)
+
+const bronchiectasisMedData =() =>  ({
     bodyTemperature:randomVal(35,38),
     bloodPressure:randomVal(80, 120),
     Respiration:randomVal(12,16),
     Glucose:randomVal(72,140),
     heartRate:randomVal(60, 100),
     Cholesterol:randomVal(125,200),
-    OxygenSaturation:randomVal(95,100)
-    )
-}
-const chdMedData =()=> ({
-    bodyTemperature:randomVal(35,38),
-    bloodPressure:randomVal(80, 120),
-    Respiration:randomVal(12,16),
-    Glucose:randomVal(72,140),
-    heartRate:randomVal(60, 100),
-    Cholesterol:randomVal(125,200),
-    OxygenSaturation:randomVal(95,100)
-    )
-}
-const hypoxemiaMedData =()=> ({
+    OxygenSaturation:randomVal(95,100)  
+})
+
+const chdMedData =() =>  ({
     bodyTemperature:randomVal(35,38),
     bloodPressure:randomVal(80, 120),
     Respiration:randomVal(12,16),
@@ -64,7 +57,18 @@ const hypoxemiaMedData =()=> ({
     Cholesterol:randomVal(125,200),
     OxygenSaturation:randomVal(95,100)
 })
-const AsthmaMedData =()=> ({
+
+const hypoxemiaMedData =() =>  ({
+    bodyTemperature:randomVal(35,38),
+    bloodPressure:randomVal(80, 120),
+    Respiration:randomVal(12,16),
+    Glucose:randomVal(72,140),
+    heartRate:randomVal(60, 100),
+    Cholesterol:randomVal(125,200),
+    OxygenSaturation:randomVal(95,100)
+})
+
+const AsthmaMedData =() =>  ({
     bodyTemperature:randomVal(35,38),
     bloodPressure:randomVal(80, 120),
     Respiration:randomVal(12,16),
@@ -100,7 +104,7 @@ app.get('/api/bronchiectasis',(req,res) =>{
     
     res.status(200).json({
         status:'success',
-        data:diabetesMedData
+        data:bronchiectasisMedData
     })
 })
 app.get('/api/chd',(req,res) =>{
