@@ -5,7 +5,7 @@ const port= process.env.PORT||8080
 const randomVal = (min, max) => {
     return Math.floor(Math.random() * (max-min+1)+min)
     };
-const normalMedData = {
+const normalMedData =()=> ({
     bodyTemperature:randomVal(35,38),
     bloodPressure:randomVal(80, 120),
     Respiration:randomVal(12,16),
@@ -13,9 +13,9 @@ const normalMedData = {
     heartRate:randomVal(60, 100),
     Cholesterol:randomVal(125,200),
     OxygenSaturation:randomVal(95,100)
-}
+})
 
-const diabetesMedData = {
+const diabetesMedData =()=> ({
     bodyTemperature:randomVal(35,38),
     bloodPressure:randomVal(80, 120),
     Respiration:randomVal(12,16),
@@ -23,9 +23,9 @@ const diabetesMedData = {
     heartRate:randomVal(60, 100),
     Cholesterol:randomVal(125,200),
     OxygenSaturation:randomVal(95,100)
-    
+    )
 }
-const prediabetesMedData = {
+const prediabetesMedData =()=> ({
     bodyTemperature:randomVal(35,38),
     bloodPressure:randomVal(80, 120),
     Respiration:randomVal(12,16),
@@ -33,9 +33,9 @@ const prediabetesMedData = {
     heartRate:randomVal(60, 100),
     Cholesterol:randomVal(125,200),
     OxygenSaturation:randomVal(95,100)
-    
+    )
 }
-const bronchiectasisMedData = {
+const bronchiectasisMedData =()=> ({
     bodyTemperature:randomVal(35,38),
     bloodPressure:randomVal(80, 120),
     Respiration:randomVal(12,16),
@@ -43,9 +43,9 @@ const bronchiectasisMedData = {
     heartRate:randomVal(60, 100),
     Cholesterol:randomVal(125,200),
     OxygenSaturation:randomVal(95,100)
-    
+    )
 }
-const chdMedData = {
+const chdMedData =()=> ({
     bodyTemperature:randomVal(35,38),
     bloodPressure:randomVal(80, 120),
     Respiration:randomVal(12,16),
@@ -53,9 +53,9 @@ const chdMedData = {
     heartRate:randomVal(60, 100),
     Cholesterol:randomVal(125,200),
     OxygenSaturation:randomVal(95,100)
-    
+    )
 }
-const hypoxemiaMedData = {
+const hypoxemiaMedData =()=> ({
     bodyTemperature:randomVal(35,38),
     bloodPressure:randomVal(80, 120),
     Respiration:randomVal(12,16),
@@ -63,8 +63,8 @@ const hypoxemiaMedData = {
     heartRate:randomVal(60, 100),
     Cholesterol:randomVal(125,200),
     OxygenSaturation:randomVal(95,100)
-}
-const AsthmaMedData = {
+})
+const AsthmaMedData =()=> ({
     bodyTemperature:randomVal(35,38),
     bloodPressure:randomVal(80, 120),
     Respiration:randomVal(12,16),
@@ -72,7 +72,7 @@ const AsthmaMedData = {
     heartRate:randomVal(60, 100),
     Cholesterol:randomVal(125,200),
     OxygenSaturation:randomVal(95,100)
-}
+})
 
 app.get('/api/normal',(req,res) =>{
     
